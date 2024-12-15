@@ -11,4 +11,6 @@ body{
     font-family: "Rubik", sans-serif;
 }
 
-#map { height: 180px; }
+#map { 
+    height: 380px;
+ }
