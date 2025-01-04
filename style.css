@@ -1,6 +1,7 @@
 :root{
     --very-dark-gray: hsl(0, 0%, 17%);
     --dark-gray: hsl(0, 0%, 59%);
+    --white: hsl(0, 0%, 100%);
 }
 
 *{
@@ -25,3 +26,31 @@ body{
    background-image: url(/images/pattern-bg-desktop.png);
    height: 200px;
 }
+
+.search-container{
+    border: 1px dotted red;
+}
+
+.search-container #search{
+    border-radius: 10px 0 0 10px;
+    border: none;
+    padding: 1em;
+}
+
+.search-container #search-button{
+    border-radius: 0 10px 10px 0;
+    border: none;
+    background-color: var(--very-dark-gray);
+}
+
+.location-container{
+    display: flex;
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 1.5em;
+}
+
+.location-container .data-title {
+    color:var(--dark-gray);
+}
+
