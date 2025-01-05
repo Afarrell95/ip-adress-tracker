@@ -18,7 +18,7 @@ body{
 
 .info-container{
     position: absolute;
-    border: 1px dotted red;
+    /* border: 1px dotted red; */
     width: 50vw;
     text-align: center;
     margin-left: 25%;
@@ -42,9 +42,9 @@ body{
    z-index: -1;
 }
 
-.search-container{
+/* .search-container{
     border: 1px dotted red;
-}
+} */
 
 .search-container #search{
     border-radius: 10px 0 0 10px;
@@ -69,3 +69,14 @@ body{
     color:var(--dark-gray);
 }
 
+.location-container .vertical-line{
+    border-left: 1.5px solid var(--dark-gray);
+    opacity: 70%;
+    margin-left: .5em;
+    margin-right: .5em;
+}
+
+.location-container .data-display{
+    display: flex;
+    flex-direction: column;
+}
