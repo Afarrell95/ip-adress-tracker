@@ -10,12 +10,14 @@
 
 body{
     font-family: "Rubik", sans-serif;
-    margin: 0;
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden;
 }
 
 .info-container{
     position: absolute;
-    border: 1px dotted red;
+    /* border: 1px dotted red; */
     width: 70vw;
     margin-left: 15%;
     margin-top: 1em;
@@ -28,9 +30,10 @@ body{
     margin-top: 0;
     margin-bottom: 1em;
     text-align: center;
+    font-weight: 400;
 }
 #map { 
-    height: 380px;
+    height: 360px;
     position: relative;
     z-index: -2;
  }
@@ -45,19 +48,26 @@ body{
 .search-container{
     margin-top: -1em;
     margin-bottom: 1.5em;
+    margin-left: 23%;
     text-align: center;
+    width: 55%;
+    display:flex;
+    /* border: 1px dotted red; */
 }
 
 .search-container #search{
     border-radius: 10px 0 0 10px;
     border: none;
     padding: 1em;
+    width:90%;
 }
 
 .search-container #search-button{
     border-radius: 0 10px 10px 0;
     border: none;
     background-color: var(--very-dark-gray);
+    padding: 1em;
+    width:10%;
 }
 
 .location-container{
@@ -66,11 +76,19 @@ body{
     background-color: var(--white);
     border-radius: 10px;
     padding: 1.5em;
+    height:auto;
+}
+
+.location-container .data-display {
+   display: flex;
+   flex-direction: column;
 }
 
 .location-container .data-title {
-    color:var(--dark-gray);
-}
+    color: var(--dark-gray);
+    font-size: .8rem;
+    font-weight: 500;
+ }
 
 .location-container .vertical-line{
     border-left: 1.5px solid var(--dark-gray);
@@ -79,7 +97,22 @@ body{
     margin-right: .5em;
 }
 
-.location-container .data-display{
-    display: flex;
-    flex-direction: column;
+.location-container .data-display .data{
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--very-dark-gray);
+}
+
+@media screen and (max-width: 800px){
+    .location-container{
+        flex-direction: column;
+        text-align: center;
+
+    }
+.location-container .data-display:not(:last-child){
+   margin-bottom: 1em;
+}
+    .location-container .vertical-line{
+        display: none;
+    }
 }
