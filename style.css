@@ -34,8 +34,9 @@ body{
 }
 #map { 
     height: 360px;
+    width: 100vw;
     position: relative;
-    z-index: -2;
+    z-index: 0;
  }
 
 .top-background{
